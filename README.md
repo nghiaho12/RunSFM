@@ -34,21 +34,21 @@ To compile simply type 'make'. After compilation you will be reminded to copy bu
 
 ### RUNNING
 Go to the directory containing all your images. Then type:
-
+```
 (path to RunSFM)/RunSFM.sh 
-
+```
 Grab some coffee ...and that's it!
 The 3D model files will be in pmvs/models
 
 RunSFM.sh has optional arguments, which you can pass:
+```
 RunSFM.sh [IMAGES_PER_CLUSTER=100] [CPU_CORES=8] [MAX_MATCHING_SEQ=-1]
-
+```
 IMAGES_PER_CLUSTER is used by CMVS/PMVS2
 CPU_CORES is used by CMVS/PMVS2
 
 The default is 100 images and 8 CPU cores. If you have limited RAM then reduce the images per CMVS cluster. 
 MAX_MATCHING_SEQ limits the matching of an image to the last N images, useful if the images were captured sequentially eg. video. A value of -1 will do the full permutation and match every image pair possible. This has a time complexity of O(N*N/2), so be careful!
-
 
 ### LICENSE
 You are free to do whatever with this package. Each individual software in this package will have their own license. As for mine, you are free to use it as you like. 

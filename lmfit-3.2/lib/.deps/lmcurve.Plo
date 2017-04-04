@@ -1,0 +1,8 @@
+lmcurve.lo: lmcurve.c /usr/include/stdc-predef.h \
+ /usr/include/x86_64-linux-gnu/bits/predefs.h lmmin.h
+
+/usr/include/stdc-predef.h:
+
+/usr/include/x86_64-linux-gnu/bits/predefs.h:
+
+lmmin.h:

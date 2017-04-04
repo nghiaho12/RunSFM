@@ -30,8 +30,7 @@ The following libraries are provided in this package, because I could not find t
 - lmfit
 
 ### COMPILING
-To compile simply type 'make'.
-
+To compile simply type 'make'. After compilation you will be reminded to copy bundler-v0.4-source/lib/libANN_char.so to /usr/local/lib and type ldconfig. Don't forget to do it!
 
 ### RUNNING
 Go to the directory containing all your images. Then type:

@@ -12,7 +12,7 @@ Some changes unrelated to speed optimisation:
 - Removed local copies of lapack, blas, gsl. It uses the one installed by the OS.
 - Removed massive dataset included by CMVS
 
---- REQUIREMENTS
+### REQUIREMENTS
 The following libraries are required, which are probably not installed by default on most Linux systems:
 
 - cmake
@@ -29,11 +29,11 @@ The following libraries are provided in this package, because I could not find t
 - flann
 - lmfit
 
---- COMPILING
+### COMPILING
 To compile simply type 'make'.
 
 
---- RUNNING
+### RUNNING
 Go to the directory containing all your images. Then type:
 
 (path to RunSFM)/RunSFM.sh 
@@ -51,11 +51,11 @@ The default is 100 images and 8 CPU cores. If you have limited RAM then reduce t
 MAX_MATCHING_SEQ limits the matching of an image to the last N images, useful if the images were captured sequentially eg. video. A value of -1 will do the full permutation and match every image pair possible. This has a time complexity of O(N*N/2), so be careful!
 
 
---- LICENSE
+### LICENSE
 You are free to do whatever with this package. Each individual software in this package will have their own license. As for mine, you are free to use it as you like. 
 
 
---- NOTES
+### NOTES
 I've found that using SiftGPU, specifically BundlerMatcher by Henri Astri (http://www.visual-experiments.com), can sometimes produce less accurate results than David Lowe's binary file. In some cases the results are bad enough to cause Bundle to fail.
 
 I've had a look at using Intel's Math Kernel Library (MKL) but found it slightly slower than using Atlas, at least for my limited test case. I've noticed MKL will use more than 1 CPU core when running Bundler. But I suspect my dataset was too small to benefit from multi-core. When linking Bundler to Atlas, it used only 1 CPU core despite explicitly linking to the multi-threaded version.

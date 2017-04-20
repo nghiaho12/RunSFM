@@ -1,5 +1,6 @@
 all:
 	cd scripts; sh checkdep.sh
+	mkdir flann-1.6.11-src/build
 	cd flann-1.6.11-src/build; cmake ..; make -j
 	cd graclus1.2; make -j
 	cd lmfit-3.2; ./configure; make
